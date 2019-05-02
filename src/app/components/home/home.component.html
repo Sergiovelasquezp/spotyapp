@@ -1,0 +1,12 @@
+<div class="container mt-3">
+  <app-loading *ngIf="loading"></app-loading>
+</div>
+<div class="container mt-3" *ngIf="error">
+  <div class="alert alert-danger" role="alert">
+    <strong>Error</strong>
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>
+<div class="container mt-3">
+  <app-cards [Items]="newReleases"></app-cards>
+</div>
